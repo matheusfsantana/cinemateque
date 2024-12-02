@@ -1,5 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe Actor, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it { should validate_presence_of(:name)  }
+  it { should validate_presence_of(:nacionality)  }
+  it { should validate_presence_of(:birth_date)  }
+  it { should have_many(:roles) }
 end
