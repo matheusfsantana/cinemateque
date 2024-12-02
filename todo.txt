@@ -1,0 +1,24 @@
+Atores e vincular a seus papeis
+
+- Banco de dados de seus atores e vincular a seu papel a um filme
+
+Usuario autenticado e cadastrado deve ser capaz de cadastrar atores ou atrizes informando:
+
+nome, data nascimento, nacionalidade
+
+na tela de detalhes do ator listagem de papeis q ele atuou com opção de cadastrar um novo papel
+
+filme ator via campo de texto um personagem
+
+EX: ator x interpretou fulano em vingadores
+
+um filme vai ter varios atores com papeis diferentes
+um ator vai participar de varios filmes com papeis diferentes
+
+API de cinemas HTTP json
+
+/movie_theater/:id
+
+nome do cinema
+a cidade do cinema
+capacidade total do cinema (soma da capacidade de todas as salas daquele cinema)
