@@ -1,0 +1,15 @@
+<h1>Registrar Papel</h1>
+
+<%= form_with(model: [@actor, @role]) do |f| %>
+  <div class="mb-6">
+    <%= f.label :name, class: 'form-label' %>
+    <%= f.text_field :name, class: 'form-field' %>
+  </div>
+    <div class="mb-6">
+      <%= f.label :movie_id, class: "block text-sm font-medium text-gray-700" %>
+      <%= f.collection_select :movie_id, @movies, :id, :title, { prompt: "Selecione um filme" }, class: "form-control block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" %>
+    </div>
+  <div>
+    <%= f.submit 'Registrar Papel', class: 'btn-confirm' %>
+  </div>
+<% end %>

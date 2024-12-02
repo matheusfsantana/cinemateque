@@ -13,6 +13,9 @@ pt-BR:
       actor:
         one: Ator
         other: Atores
+      role:
+        one: Papel
+        other: Papéis
     attributes:
       movie_theater:
         name: Nome
@@ -29,4 +32,8 @@ pt-BR:
         name: Nome
         birth_date: Data de Nascimento
         nacionality: Nacionalidade
+      role:
+        name: Papel
+        movie_id: Filme
+        actor_id: Ator
 

@@ -1,4 +1,4 @@
-<%= page_title(t('.title')) %>
+<h1>Registrar Ator</h1>
 
 <%= form_with(model: @actor) do |f| %>
   <div class="mb-6">
@@ -14,6 +14,6 @@
     <%= f.text_field :nacionality, class: 'form-field' %>
   </div>
   <div>
-    <%= f.submit 'Criar Cinema', class: 'btn-confirm' %>
+    <%= f.submit 'Registrar Ator', class: 'btn-confirm' %>
   </div>
 <% end %>

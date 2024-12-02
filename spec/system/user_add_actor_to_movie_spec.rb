@@ -1,8 +1,7 @@
 require 'rails_helper'
 
-describe 'Add actor to movie ' do
+describe 'Add actor' do
   it 'success' do
-    movie_theater = FactoryBot.create(:movie_theater, name: 'Cine Paradiso')
     user = FactoryBot.create(:user, email: 'joao@email.com', password: '123456789')
     login_as user
 
@@ -21,8 +20,25 @@ describe 'Add actor to movie ' do
 
     expect(page).to have_css 'h1', text: 'Atores'
     expect(page).to have_content 'Matheus Santana'
-    expect(page).to have_content '12/09/2000'
+    expect(page).to have_content '13 de julho de 2019'
     expect(page).to have_content 'Brasileiro'
     expect(page).to have_content 'Ator registrado com sucesso.'
+  end
+
+  it 'fail' do
+    user = FactoryBot.create(:user, email: 'joao@email.com', password: '123456789')
+    login_as user
+
+    visit root_path
+    within('nav') do
+      click_on 'Atores'
+    end
+
+    click_on 'Registrar Ator'
+    fill_in 'Nome', with: ''
+    click_on 'Registrar Ator'
+
+    expect(page).to have_css 'h1', text: 'Registrar Ator'
+    expect(page).to have_content 'Ator não foi registrado.'
   end
 end
